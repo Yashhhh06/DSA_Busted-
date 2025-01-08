@@ -1,0 +1,22 @@
+# Day 2: Problem Solutions
+
+# Problem 1: Reach 5 Star
+# Chef's rating check to become 5 star rated
+X, Y = map(int, input().split())
+if X + Y >= 2000:
+    print("YES")
+else:
+    print("NO")
+
+# Problem 2: Summation from 1 to N
+# Calculate the sum of numbers from 1 to N
+N = int(input())
+print(N * (N + 1) // 2)
+
+# Problem 3: Multiples
+# Check if A is a multiple of B or vice versa
+A, B = map(int, input().split())
+if A % B == 0 or B % A == 0:
+    print("Multiples")
+else:
+    print("No Multiples")
