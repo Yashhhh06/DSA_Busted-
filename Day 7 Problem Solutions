@@ -1,0 +1,47 @@
+# Day 7 Problem Solutions
+
+# Problem 1: Medium Number
+def medium_number(t, test_cases):
+    # Find the medium number (neither the minimum nor the maximum)
+    for case in test_cases:
+        a, b, c = case
+        print(sorted([a, b, c])[1])  # Sorting the numbers and picking the second element
+
+# Problem 2: Marathon
+def marathon_position(t, test_cases):
+    # Count how many participants are in front of Timur
+    for case in test_cases:
+        a, b, c, d = case
+        # Count how many participants have run more than Timur
+        print(len([x for x in [b, c, d] if x > a]))
+
+# Problem 3: Sum of Round Numbers
+def round_numbers_sum(t, test_cases):
+    # Represent each number as a sum of round numbers
+    for n in test_cases:
+        round_numbers = []
+        place_value = 1
+        while n > 0:
+            digit = n % 10
+            if digit != 0:
+                round_numbers.append(digit * place_value)
+            n //= 10
+            place_value *= 10
+        print(len(round_numbers), *round_numbers)
+
+# Main Code Block for Input and Output
+if __name__ == "__main__":
+    # Problem 1: Medium Number
+    t = int(input("Enter the number of test cases for Medium Number problem: "))
+    test_cases = [tuple(map(int, input().split())) for _ in range(t)]
+    medium_number(t, test_cases)
+    
+    # Problem 2: Marathon
+    t = int(input("Enter the number of test cases for Marathon problem: "))
+    test_cases = [tuple(map(int, input().split())) for _ in range(t)]
+    marathon_position(t, test_cases)
+    
+    # Problem 3: Sum of Round Numbers
+    t = int(input("Enter the number of test cases for Sum of Round Numbers problem: "))
+    test_cases = [int(input()) for _ in range(t)]
+    round_numbers_sum(t, test_cases)
