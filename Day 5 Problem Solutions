@@ -1,20 +1,38 @@
-# Problem 1: Primes from 1 to N
-def sieve_of_eratosthenes(N):
-    primes = [True] * (N + 1)
-    primes[0], primes[1] = False, False  # 0 and 1 are not primes
-    for i in range(2, int(N ** 0.5) + 1):
-        if primes[i]:
-            for j in range(i * i, N + 1, i):
-                primes[j] = False
-    return [i for i in range(2, N + 1) if primes[i]]
+# Problem 1: Digits
+def print_digits(T, test_cases):
+    for number in test_cases:
+        print(" ".join(list(str(number)[::-1])))
 
-# Problem 2: Sum of Consecutive Odd Numbers
-def sum_of_odd_numbers(X, Y):
-    start, end = min(X, Y) + 1, max(X, Y) - 1
-    sum_odds = sum(i for i in range(start, end + 1) if i % 2 != 0)
-    return sum_odds
+# Problem 2: Three Numbers
+def count_combinations(K, S):
+    count = 0
+    for X in range(K + 1):
+        for Y in range(K + 1):
+            Z = S - X - Y
+            if 0 <= Z <= K:
+                count += 1
+    return count
 
-# Problem 3: GCD (Greatest Common Divisor)
-import math
-def find_gcd(A, B):
-    return math.gcd(A, B)
+# Problem 3: Short Sort
+def can_sort_with_one_swap(test_cases):
+    for s in test_cases:
+        if sorted(s) == list(s) or sorted(s) == list(s)[::-1]:
+            print("YES")
+        else:
+            print("NO")
+
+# Main Code Block for Input and Output
+if __name__ == "__main__":
+    # Problem 1: Digits
+    T = int(input("Enter the number of test cases for Digits problem: "))
+    test_cases = [int(input()) for _ in range(T)]
+    print_digits(T, test_cases)
+    
+    # Problem 2: Three Numbers
+    K, S = map(int, input("Enter K and S for Three Numbers problem: ").split())
+    print(count_combinations(K, S))
+    
+    # Problem 3: Short Sort
+    t = int(input("Enter the number of test cases for Short Sort problem: "))
+    test_cases = [input().strip() for _ in range(t)]
+    can_sort_with_one_swap(test_cases)
