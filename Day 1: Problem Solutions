@@ -1,0 +1,44 @@
+// Day 1: Problem Solutions
+
+// Problem 1: IOI 2024
+#include <iostream>
+using namespace std;
+
+int main() {
+    int X;
+    cin >> X;
+    if (X >= 1 && X <= 8) {
+        cout << "YES" << endl;
+    } else {
+        cout << "NO" << endl;
+    }
+    return 0;
+}
+
+// Problem 2: Add Two Numbers
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+    while (T--) {
+        int A, B;
+        cin >> A >> B;
+        cout << A + B << endl;
+    }
+    return 0;
+}
+
+// Problem 3: Simple Calculator
+#include <iostream>
+using namespace std;
+
+int main() {
+    int X, Y;
+    cin >> X >> Y;
+    cout << X << " + " << Y << " = " << X + Y << endl;
+    cout << X << " * " << Y << " = " << X * Y << endl;
+    cout << X << " - " << Y << " = " << X - Y << endl;
+    return 0;
+}
