@@ -1,0 +1,20 @@
+# Problem 1: Primes from 1 to N
+def sieve_of_eratosthenes(N):
+    primes = [True] * (N + 1)
+    primes[0], primes[1] = False, False  # 0 and 1 are not primes
+    for i in range(2, int(N ** 0.5) + 1):
+        if primes[i]:
+            for j in range(i * i, N + 1, i):
+                primes[j] = False
+    return [i for i in range(2, N + 1) if primes[i]]
+
+# Problem 2: Sum of Consecutive Odd Numbers
+def sum_of_odd_numbers(X, Y):
+    start, end = min(X, Y) + 1, max(X, Y) - 1
+    sum_odds = sum(i for i in range(start, end + 1) if i % 2 != 0)
+    return sum_odds
+
+# Problem 3: GCD (Greatest Common Divisor)
+import math
+def find_gcd(A, B):
+    return math.gcd(A, B)
