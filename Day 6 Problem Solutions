@@ -1,0 +1,43 @@
+# Day 5 Problem Solutions
+
+# Problem 1: Digits
+def print_digits(T, test_cases):
+    # Print digits of each number in reverse order
+    for number in test_cases:
+        print(" ".join(list(str(number)[::-1])))
+
+# Problem 2: Three Numbers
+def count_combinations(K, S):
+    # Count how many combinations of X, Y, Z satisfy X + Y + Z = S
+    count = 0
+    for X in range(K + 1):
+        for Y in range(K + 1):
+            Z = S - X - Y
+            if 0 <= Z <= K:
+                count += 1
+    return count
+
+# Problem 3: Short Sort
+def can_sort_with_one_swap(test_cases):
+    # Check if we can sort the string into 'abc' with at most one swap
+    for s in test_cases:
+        if sorted(s) == list(s) or sorted(s) == list(s)[::-1]:
+            print("YES")
+        else:
+            print("NO")
+
+# Main Code Block for Input and Output
+if __name__ == "__main__":
+    # Problem 1: Digits
+    T = int(input("Enter the number of test cases for Digits problem: "))
+    test_cases = [int(input()) for _ in range(T)]
+    print_digits(T, test_cases)
+    
+    # Problem 2: Three Numbers
+    K, S = map(int, input("Enter K and S for Three Numbers problem: ").split())
+    print(count_combinations(K, S))
+    
+    # Problem 3: Short Sort
+    t = int(input("Enter the number of test cases for Short Sort problem: "))
+    test_cases = [input().strip() for _ in range(t)]
+    can_sort_with_one_swap(test_cases)
