@@ -3,7 +3,7 @@ Solutions to problems from the 30-day DSA Busted event, with code for each day's
 
 ## Problem links
 
-<details open>
+<details>
   <summary> Day 1 </summary>
   
   - [Problem 1](https://www.codechef.com/problems/IOI2024)
