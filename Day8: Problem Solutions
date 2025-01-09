@@ -1,0 +1,39 @@
+//Day8_Pro1
+void seeding(int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n - i; j++) {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
+
+
+//Day8_Prob2
+void nStarTriangle(int n) {
+for(int i=0;i<n;i++) {
+  for(int j=0;j<i;j++){
+    cout<<" ";
+  }
+  for(int j=0;j<(n-i)*2-1;j++){
+    cout<<"*";
+  }
+  for(int j=0;j<i;j++){
+    cout<<" ";
+  }
+  cout<<endl;
+}
+}
+
+//Day8_Prob3
+void nNumberTriangle(int n) {
+int num=1;
+for (int i=1; i<=n; i++) {
+  for (int j=1; j<=i; j++) {
+    cout<<num<<" ";
+    num++;
+  }
+  cout << endl;
+}
+}
+
