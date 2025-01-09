@@ -69,9 +69,9 @@ Solutions to problems from the 30-day DSA Busted event, with code for each day's
 <details>
   <summary> Day 8 </summary>
   
-  - [Problem 1]()
-  - [Problem 2]()
-  - [Problem 3]()
+  - [Problem 1](https://www.naukri.com/code360/problems/seeding_6581892)
+  - [Problem 2](https://www.naukri.com/code360/problems/reverse-star-triangle_6573685)
+  - [Problem 3](https://www.naukri.com/code360/problems/increasing-number-triangle_6581893)
 
 </details>
 
