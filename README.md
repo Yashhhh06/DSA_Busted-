@@ -75,6 +75,16 @@ Solutions to problems from the 30-day DSA Busted event, with code for each day's
 
 </details>
 
+<details>
+  <summary> Day 9 </summary>
+  
+  - [Problem 1](https://www.naukri.com/code360/problems/ninja-and-the-star-pattern-i_6581920)
+  - [Problem 2](https://www.naukri.com/code360/problems/star-diamond_6573686)
+  - [Problem 3](https://www.naukri.com/code360/problems/number-crown_6581894)
+
+</details>
+
+
 
 ## About
 
