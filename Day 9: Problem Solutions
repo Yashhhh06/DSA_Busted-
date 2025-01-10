@@ -1,0 +1,64 @@
+//Yashmohite_Day9_Prob1
+public class Solution {
+    public static void getStarPattern(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (i == 1 || i == n || j == 1 || j == n) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        getStarPattern(3);
+        System.out.println();
+        getStarPattern(5);
+        System.out.println();
+        getStarPattern(8);
+    }
+}
+
+
+
+//Yashmohite_Day9_Prob2
+
+#include <iostream>
+using namespace std;
+void nStarDiamond(int n) {
+  for (int i = 1; i <= n; i++) {
+    for (int j = 1; j <= n - i; j++) cout << " ";
+    for (int j = 1; j <= 2 * i - 1; j++) cout << "*";
+    cout << endl;
+  }
+  for (int i = n; i >= 1; i--) {
+    for (int j = 1; j <= n - i; j++) cout << " ";
+    for (int j = 1; j <= 2 * i - 1; j++) cout << "*";
+    cout << endl;
+  }
+}
+
+
+//Yashmohite_Day9_Prob3
+
+
+#include <iostream>
+using namespace std;
+
+void numberCrown(int n) {
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++) {
+            cout << j << " ";
+        }
+        for (int j = 1; j <= 2 * (n - i); j++) {
+            cout << "  ";
+        }
+        for (int j = i; j >= 1; j--) {
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+}
